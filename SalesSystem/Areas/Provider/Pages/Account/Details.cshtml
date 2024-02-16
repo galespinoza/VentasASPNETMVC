@@ -1,0 +1,90 @@
+﻿@page
+@model DetailsModel
+@{
+    var image = "data:image/jpg;base64," + Convert.ToBase64String(Model.Input.DataProvider.Image,
+        0, Model.Input.DataProvider.Image.Length);
+    var name = Model.Input.DataProvider.Provider ;
+}
+<div class="container">
+    <h1>@name</h1>
+    <div class="row">
+        <div class="col-sm ">
+            <div class="card text-center" style="width: 21rem;">
+                <div class="card-header ">
+                    <img class='imageUserDetails' src="@image" />
+                </div>
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <p> @name</p>
+                        </div>
+                        
+                        <div class="row">
+                            <a asp-area="Provider" asp-page="Reports" asp-route-id="@Model.Input.DataProvider.IdProvider" class="btn btn-info ">
+                                Reportes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <table class="tableCursos">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Informacion
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Nombre
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>@name</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Telefono
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>@Model.Input.DataProvider.Phone</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Correo electronico
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>@Model.Input.DataProvider.Email</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <form asp-area="Provider" asp-page="Register" method="post">
+                                        @{
+                                            var DataProvider = JsonConvert.SerializeObject(Model.Input.DataProvider);
+                                        }
+
+                                        <input type="hidden" name="DataProvider" value="@DataProvider" />
+                                        <input type="submit" value="Editar" class="btn btn-success ">
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

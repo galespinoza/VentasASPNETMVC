@@ -1,0 +1,4 @@
+﻿
+class User extends Uploadpicture {
+
+}

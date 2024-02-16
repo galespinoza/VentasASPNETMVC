@@ -1,0 +1,263 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SalesSystem
+build_property.RootNamespace = SalesSystem
+build_property.ProjectDir = D:\PROYECTO\UDEMY\Sistema de ventas en ASP NET MVC en C# and SQL full stack\Portafolio\SalesSystem\SalesSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PROYECTO\UDEMY\Sistema de ventas en ASP NET MVC en C# and SQL full stack\Portafolio\SalesSystem\SalesSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Boxes/Views/Boxes/Boxes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm94ZXNcVmlld3NcQm94ZXNcQm94ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Boxes/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm94ZXNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Boxes/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQm94ZXNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/Account/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXEFjY291bnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/Account/DetailsDebt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXEFjY291bnRcRGV0YWlsc0RlYnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/Account/InterestDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXEFjY291bnRcSW50ZXJlc3REZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXEFjY291bnRcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/Account/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXEFjY291bnRcUmVwb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFBhZ2VzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Views/Customers/Customers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFZpZXdzXEN1c3RvbWVyc1xDdXN0b21lcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Customers/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ3VzdG9tZXJzXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Principal/Views/Principal/Principal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJpbmNpcGFsXFZpZXdzXFByaW5jaXBhbFxQcmluY2lwYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Principal/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJpbmNpcGFsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Principal/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJpbmNpcGFsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Pages/Account/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxQYWdlc1xBY2NvdW50XEFkZFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Pages/Account/DetailsProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxQYWdlc1xBY2NvdW50XERldGFpbHNQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Pages/Account/UpdateProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxQYWdlc1xBY2NvdW50XFVwZGF0ZVByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxQYWdlc1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxQYWdlc1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Views/Product/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxWaWV3c1xQcm9kdWN0XFByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Product/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/Account/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcQWNjb3VudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/Account/DetailsDebt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcQWNjb3VudFxEZXRhaWxzRGVidC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/Account/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcQWNjb3VudFxSZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Views/Provider/Provider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcVmlld3NcUHJvdmlkZXJcUHJvdmlkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Provider/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvdmlkZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Setting/Views/Setting/Setting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2V0dGluZ1xWaWV3c1xTZXR0aW5nXFNldHRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Setting/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2V0dGluZ1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Setting/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2V0dGluZ1xWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Pages/Account/AddShopping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcUGFnZXNcQWNjb3VudFxBZGRTaG9wcGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Pages/Account/DetailsShopping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcUGFnZXNcQWNjb3VudFxEZXRhaWxzU2hvcHBpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Views/Shopping/Shopping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcVmlld3NcU2hvcHBpbmdcU2hvcHBpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Shopping/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2hvcHBpbmdcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Pages/Account/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcUGFnZXNcQWNjb3VudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Views/Users/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcVXNlcnNcVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Areas/Users/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlcnNcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PROYECTO/UDEMY/Sistema de ventas en ASP NET MVC en C\# and SQL full stack/Portafolio/SalesSystem/SalesSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dcs9taza4b

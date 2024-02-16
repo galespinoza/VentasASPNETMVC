@@ -1,0 +1,282 @@
+﻿@page "/Shopping/AddShopping"
+@model AddShoppingModel
+@{
+    var image = "";
+    if (Model.Input.Image != null)
+    {
+        image = "data:image/jpg;base64," + Convert.ToBase64String(Model.Input.Image,
+       0, Model.Input.Image.Length);
+    }
+    else
+    {
+        image = "/images/images/add_shopping.png";
+
+    }
+}
+<div class="container">
+    <h2>Shopping</h2>
+    <div class="row">
+        <div class="col-sm ">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#nav-shopping" role="tab" aria-selected="true">Shopping</a>
+
+                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-payments" role="tab" aria-selected="false">Payments</a>
+
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-shopping" role="tabpanel">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card text-center">
+                                    <div class="card-header ">
+                                        <output id="imageShopping">
+                                            <img src=@image class="imageUser" />
+                                        </output>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="caption text-center">
+                                            <label class="btn btn-primary" for="files">Imagen</label>
+                                            <input asp-for="Input.AvatarImage" accept="image/*" type="file" id="files">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-md-5">
+                                <div class="panel  panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Registrar compra</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                     data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <div class="form-group">
+                                                            <input asp-for="Input.Description" placeholder="Descripción" class="form-control" autofocus autocomplete="off" />
+                                                            <span asp-validation-for="Input.Description" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input asp-for="Input.Quantity" placeholder="Cantidad" class="form-control" min="1" autocomplete="off" onkeyup="shopping.purchaseAmount()" />
+                                                            <span asp-validation-for="Input.Quantity" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input asp-for="Input.Price" placeholder="Precio de compra" class="form-control" autocomplete="off" onkeyup="shopping.purchaseAmount()" />
+                                                            <span asp-validation-for="Input.Price" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <span class="text-danger labelCompra_Importe">
+                                                                @Html.Raw(Model.Input.Money)
+                                                                <label class="text-success labelCompra_Importe" id="labelCompra_Importe">0.00  </label>
+                                                            </span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input asp-for="Input.Provider" placeholder="Proveedor" class="form-control" autocomplete="off" onkeyup="shopping.GetProvider()"/>
+                                                            <span asp-validation-for="Input.Provider" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select id="listProvider" class='form-control' onclick="shopping.SetProvider()">
+
+                                                            </select>
+                                                        </div>
+                                                            <div class="row">
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12">
+                                                                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12">
+                                                                        <a href="/Shopping/AddShopping?cancel=true" class="btn btn-warning text-white">Cancel</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="nav-payments" role="tabpanel">
+                    <form method="post">
+                        <div class="col-xl-7 col-md-5">
+                            <div class="panel  panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Realizar compra</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label>
+                                                            Importe total
+                                                        </label>
+                                                        <br />
+                                                        <span class="text-danger labelCompra_Importe">
+                                                            @Html.Raw(Model.Input.Money)
+                                                            <label class="text-danger labelCompra_Importe">@string.Format("{0:#,###,###,##0.00####}", Model.amount)</label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input asp-for="Input.Payments" placeholder="Pago" class="form-control" autocomplete="off" onkeyup="shopping.Payments(@Model.amount)" />
+                                                        <span asp-validation-for="Input.Payments" class="text-danger"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label id="labelCompra_Debt">
+                                                            Deuda total
+                                                        </label>
+                                                        <br />
+                                                        <span class="text-danger labelCompra_Importe">
+                                                            @Html.Raw(Model.Input.Money)
+                                                            <label class="text-success labelCompra_Importe" id="labelCompra_Debts">0.00  </label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-check form-check-inline">
+                                                            <input type="checkbox" class="form-check-input" id="check" asp-for="Input.Credit" onclick="shopping.Check()">
+                                                            <label class="form-check-label" for="check">Credito</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="form-group">
+                                                                <button type="submit" class="btn btn-primary btn-block" id="payment">Aceptar</button>
+                                                            </div>
+                                                            &nbsp;&nbsp;
+                                                            <div class="form-group">
+                                                                <a href="/Shopping/AddShopping" class="btn btn-warning btn-block text-white">
+                                                                    Cancelar
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input name="value" type="hidden" value="1" />
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-fee2" role="tabpanel">
+                            <div class="tab-pane fade show active" id="nav-fee2" role="tabpanel">
+                                <form method="get">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <input type="text" name="search" placeholder="Busacar" class="form-control" autofocus autocomplete="off" />
+                                        </div>
+                                        &nbsp;&nbsp;
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-outline-info btn-sm">Buscar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Input.Description)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Input.Quantity)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Input.Price)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.Input.Amount)
+                                            </th>
+                                            <th>
+                                                Edit
+                                            </th>
+                                            <th>
+                                                Delete
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Input.Temporary_shopping.List)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.Raw(item.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.Raw(item.Quantity)
+                                                </td>
+                                                <td>
+                                                    @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Price)
+                                                </td>
+                                                <td>
+                                                    @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Amount)
+                                                </td>
+                                                <td>
+                                                    <a href="/Shopping/AddShopping?id=@Model._idPage&IdTemporary=@item.IdTemporary" class="btn btn-outline-info btn-sm">
+                                                        Editar
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <form method="post">
+                                                        <div class="form-group">
+                                                            <button type="submit" class="btn btn-outline-danger btn-sm">Eliminar</button>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input name="delete" type="hidden" value="@item.IdTemporary" />
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <div class="form-group">
+                                    <label>
+                                        Importe total:&nbsp;
+                                        <span class="text-danger">
+                                            @Html.Raw(Model.Input.Money)
+                                            <label class="text-success ">@string.Format("{0:#,###,###,##0.00####}", Model.amount)</label>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="text-center">
+                                    Resultados @Html.Raw(Model.Input.Temporary_shopping.Pagi_info)
+                                    <br />
+                                    @Html.Raw(Model.Input.Temporary_shopping.Pagi_navegacion)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

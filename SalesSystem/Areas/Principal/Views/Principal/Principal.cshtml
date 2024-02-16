@@ -1,0 +1,257 @@
+﻿@model DataPaginador<InputModels>
+@{
+	ViewData["Title"] = "Principal";
+	var money = LSetting.Mony;
+}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a class="nav-item nav-link active" data-toggle="tab" href="#nav-sales"
+					   role="tab" aria-selected="true">Sales</a>
+
+					<a class="nav-item nav-link" data-toggle="tab" href="#nav-income"
+					   role="tab" aria-selected="false">Income</a>
+				</div>
+			</nav>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-sales" role="tabpanel">
+					<form method="post" asp-area="Principal" asp-controller="Principal" asp-action="CollectSales" enctype="multipart/form-data">
+						<div class="row">
+							<div class="col-xl-7 col-md-5">
+								<div class="card">
+									<div class="card-header">
+										<h5>Ventas de productos</h5>
+									</div>
+									<div class="card-body">
+										<div class="form-group" style="margin-top: 0px">
+											<div class="col-md-10">
+												<input asp-for="Input.Credit" class="form-check-input" />
+											</div>
+											<label asp-for="Input.Credit" class="col-md-10 control-label"></label>
+										</div>
+										<div class="form-group">
+											<input asp-for="Input.Payments" placeholder="Pago" class="form-control"
+												   autofocus autocomplete="off" onkeypress="return principal.Payments(event,this,@Model.Input.TotalDebt)" />
+											<span asp-validation-for="Input.Payments" class="text-danger"></span>
+										</div>
+										<div class="form-group" style="margin-bottom: 0px">
+											<div class="col-md-12">
+												<div class="row">
+													<label class="control-label">Monto a pagar</label>
+												</div>
+												<div class="row">
+													<span class="text-danger labelCompra_Importe">
+														@Html.Raw(money)
+														<label class="text-success labelCompra_Importe" id="labelVenta_Importe">
+															@string.Format("{0:#,###,###,##0.00####}", Model.Input.TotalDebt)
+														</label>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom: 0px">
+											<div class="col-md-12">
+												<div class="row">
+													<label class="control-label">Su cambio</label>
+												</div>
+												<div class="row">
+													<span class="text-danger labelCompra_Importe">
+														@Html.Raw(money)
+														<label class="text-success labelCompra_Importe" id="labelVenta_Change">0.00</label>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom: 0px">
+											<div class="col-md-12">
+												<div class="row">
+													<label class="control-label">Deuda total</label>
+												</div>
+												<div class="row">
+													<span class="text-danger labelCompra_Importe">
+														<label class="text-success labelCompra_Importe" id="labelVenta_Debt">0.00</label>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group" style="margin-bottom: 0px">
+												<div class="col-md-12">
+													<button type="submit" class="btn btn-primary btn-block">Register</button>
+												</div>
+											</div>
+											<div class="form-group" style="margin-bottom: 0px">
+												<div class="col-md-12">
+													<a href="" class="btn btn-warning text-white">Cancel</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane fade" id="nav-income" role="tabpanel">
+					<div class="row">
+						<div class="card">
+							<div class="card-header">
+								<h5>Ingresos de caja</h5>
+							</div>
+							<div class="card-body">
+								<div class="form-group" style="margin-bottom: 0px">
+									<div class="col-md-12">
+										<div class="row">
+											<label class="control-label">Ingreso inicial</label>
+										</div>
+										<div class="row">
+											<span class="text-danger labelCompra_Importe">
+												@Html.Raw(money)
+												<label class="text-success labelCompra_Importe">
+													@string.Format("{0:#,###,###,##0.00####}", Model.Input.TotalIncome[0])
+												</label>
+											</span>
+										</div>
+                                    </div>
+                                 </div>
+								 <div class="form-group" style="margin-bottom: 0px">
+									 <div class="col-md-12">
+                                         <div class="row">
+											<label class="control-label">Ingreso de ventas</label>
+										</div>
+										<div class="row">
+											<span class="text-danger labelCompra_Importe">
+												@Html.Raw(money)
+												<label class="text-success labelCompra_Importe">
+													@string.Format("{0:#,###,###,##0.00####}", Model.Input.TotalIncome[1])
+												</label>
+											</span>
+										</div>
+                                     </div>
+                                 </div>
+								 <div class="form-group" style="margin-bottom: 0px">
+									 <div class="col-md-12">
+                                          <div class="row">
+											<label class="control-label">Ingreso total</label>
+										</div>
+										<div class="row">
+											<span class="text-danger labelCompra_Importe">
+												@Html.Raw(money)
+												<label class="text-success labelCompra_Importe">
+													@string.Format("{0:#,###,###,##0.00####}", Model.Input.TotalIncome[2])
+												</label>
+											</span>
+										</div>
+									</div>
+                                 </div>
+							</div>
+                        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7">
+			<div class="card">
+				<div class="card-body">
+					<form asp-area="Principal" asp-controller="Principal" asp-action="Search" method="POST">
+						<div class="row">
+							<div class="form-group">
+								<input asp-for="Input.Search" name="Search" placeholder="Busacar" class="form-control" autofocus autocomplete="off" />
+								<span asp-validation-for="Input.Search" class="text-danger"></span>
+							</div>
+							&nbsp;&nbsp;
+							<div class="col-md-3">
+								<input asp-for="Input.Quantity" name="Quantity" min="1" class="form-control" />
+							</div>
+							&nbsp;&nbsp;
+							<div class="form-group">
+								<button type="submit" class="btn btn-outline-info btn-sm">Buscar</button>
+							</div>
+						</div>
+					</form>
+					<div class="form-group">
+						<label>
+							Importe total:&nbsp;
+							<span class="text-danger">
+								@Html.Raw(money)
+								<label class="text-success ">
+									@string.Format("{0:#,###,###,##0.00####}",
+									Model.Input.TotalDebt)
+								</label>
+							</span>
+						</label>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>
+									@Html.DisplayNameFor(model => model.Input.Description)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Input.Quantity)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Input.Price)
+								</th>
+								<th>
+									@Html.DisplayNameFor(model => model.Input.Amount)
+								</th>
+								<th>
+									Edit
+								</th>
+								<th>
+									Delete
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model.List)
+							{
+								<tr>
+									<td>
+										@Html.Raw(item.Description)
+									</td>
+									<td>
+										@Html.Raw(item.Quantity)
+									</td>
+									<td>
+										@string.Format(money + "{0:#,###,###,##0.00####}", item.Price)
+									</td>
+									<td>
+										@string.Format(money + "{0:#,###,###,##0.00####}", item.Amount)
+									</td>
+									<td>
+										<a href="/Principal/GetSales?id=@Model.Input.IdPage&IdTemporary=@item.IdTempo"
+									   class="btn btn-outline-info btn-sm">
+											Editar
+										</a>
+									</td>
+									<td>
+										<a href="/Principal/DeleteSales?id=@Model.Input.IdPage&idTemporary=@item.IdTempo"
+									   class="btn btn-outline-danger btn-sm">
+											Delete
+										</a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+					<div>
+						<label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage1)  </label>
+					</div>
+				</div>
+				<div class="text-center">
+					Resultados @Html.Raw(Model.Pagi_info)
+					<br />
+					@Html.Raw(Model.Pagi_navegacion)
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SalesSystem.Library
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject ApplicationDbContext Context
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var id = UserManager.GetUserId(User);
+        var user = Context.TUsers.Where(u => u.IdUser.Equals(id)).ToList();
+        var name = user.Count.Equals(0) ? "PDHN" : $"{user[0].Name} {user[0].LastName}";
+        var boxData = new LUser(Context);
+        boxData.Verificar(id);
+        var box = LUser.boxData != null ? LUser.boxData.Box : 0;
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@name</a>
+        </li>
+        <li class="nav-item">
+            <h4 class="nav-link text-success">N#@box</h4>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Users" asp-controller="Users" asp-action="Logout">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        @*<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="Users" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>*@
+    }
+</ul>

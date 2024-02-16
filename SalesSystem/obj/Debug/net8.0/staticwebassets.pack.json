@@ -1,0 +1,353 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SalesSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SalesSystem.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\1506368.png",
+      "PackagePath": "staticwebassets\\codes\\1506368.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\2975770.png",
+      "PackagePath": "staticwebassets\\codes\\2975770.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\3198939.png",
+      "PackagePath": "staticwebassets\\codes\\3198939.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\3698108.png",
+      "PackagePath": "staticwebassets\\codes\\3698108.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\6087513.png",
+      "PackagePath": "staticwebassets\\codes\\6087513.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\8461697.png",
+      "PackagePath": "staticwebassets\\codes\\8461697.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\84616970.png",
+      "PackagePath": "staticwebassets\\codes\\84616970.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\8875264.png",
+      "PackagePath": "staticwebassets\\codes\\8875264.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\9156328.png",
+      "PackagePath": "staticwebassets\\codes\\9156328.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\codes\\9215993.png",
+      "PackagePath": "staticwebassets\\codes\\9215993.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\images\\images\\add_shopping.png",
+      "PackagePath": "staticwebassets\\images\\images\\add_shopping.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\images\\images\\default.png",
+      "PackagePath": "staticwebassets\\images\\images\\default.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\images\\logo-google.png",
+      "PackagePath": "staticwebassets\\images\\logo-google.png"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Boxes.js",
+      "PackagePath": "staticwebassets\\js\\Boxes.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Customers.js",
+      "PackagePath": "staticwebassets\\js\\Customers.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Principal.js",
+      "PackagePath": "staticwebassets\\js\\Principal.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Provider.js",
+      "PackagePath": "staticwebassets\\js\\Provider.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Shopping.js",
+      "PackagePath": "staticwebassets\\js\\Shopping.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\Uploadpicture.js",
+      "PackagePath": "staticwebassets\\js\\Uploadpicture.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\User.js",
+      "PackagePath": "staticwebassets\\js\\User.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\function.js",
+      "PackagePath": "staticwebassets\\js\\function.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\PROYECTO\\UDEMY\\Sistema de ventas en ASP NET MVC en C# and SQL full stack\\Portafolio\\SalesSystem\\SalesSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SalesSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SalesSystem.props",
+      "PackagePath": "build\\SalesSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SalesSystem.props",
+      "PackagePath": "buildMultiTargeting\\SalesSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SalesSystem.props",
+      "PackagePath": "buildTransitive\\SalesSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

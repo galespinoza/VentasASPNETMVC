@@ -1,0 +1,113 @@
+﻿@page "/Users/Register"
+@model RegisterModel
+@{
+    var image = "";
+    if (Model.Input.Image != null)
+    {
+        image = "data:image/jpg;base64," + Convert.ToBase64String(Model.Input.Image,
+       0, Model.Input.Image.Length);
+    }
+    else
+    {
+        image = "/images/images/default.png";
+    }
+    
+}
+<div class="container p-4">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="card text-center">
+                    <div class="card-header ">
+                        <output id="imageUser">
+                            <img src=@image class="imageUser" />
+                        </output>
+                    </div>
+                    <div class="card-body">
+                        <div class="caption text-center">
+                            <label class="btn btn-primary" for="files">Cargar foto</label>
+                            <input asp-for="Input.AvatarImage" accept="image/*" type="file" id="files">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-5">
+                <div class="panel  panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Registrar usuarios</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <div id="header" class="bg-info">
+                                        <h2 class="mb-0 t">
+                                            <button class="btn btn-link text-light " type="button" data-toggle="collapse"
+                                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Ingresar informacion
+                                            </button>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <input asp-for="Input.NID" placeholder="NID" class="form-control" autofocus />
+                                            <span asp-validation-for="Input.NID" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.Name" placeholder="Name" class="form-control" />
+                                            <span asp-validation-for="Input.Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.LastName" placeholder="Last Name" class="form-control" />
+                                            <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.PhoneNumber" placeholder="Phone Number" class="form-control" />
+                                            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.Email" placeholder="Email" class="form-control" />
+                                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                        </div>
+                                        @if (Model.Input.Id.Equals(0))
+                                        {
+                                            <div class="form-group">
+                                                <input asp-for="Input.Password" placeholder="Password" class="form-control" />
+                                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                            </div>
+                                        }
+
+                                    <div class="form-group">
+                                        @if (!Model.Input.Id.Equals(0))
+                                        {
+                                            @Html.DropDownList("Input.Role", new SelectList(Model.Input.rolesLista, "Text", "Text"), new { @class = "form-control" });
+                                        }
+                                        else
+                                        {
+                                            @Html.DropDownList("Input.Role", new SelectList(Model.Input.rolesLista, "Text", "Text"), "Seleccione un role", new { @class = "form-control" })
+                                        }
+
+                                        <span asp-validation-for="Input.Role" class="text-danger"></span>
+                                    </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

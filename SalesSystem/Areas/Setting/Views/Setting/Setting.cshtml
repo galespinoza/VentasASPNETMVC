@@ -1,0 +1,63 @@
+﻿@model InputModelSetting
+@{
+    ViewData["Title"] = "Setting";
+}
+
+<div class="container">
+    <h3>Setting</h3>
+    <div class="row">
+        <div class="col-sm ">
+            <div class="card" style="width: 21rem;">
+                <div class="card-header ">
+                    <h5>Setting</h5>
+                </div>
+                <div class="card-body">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-money" role="tab" aria-selected="true">Type of money</a>
+
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-interests" role="tab" aria-selected="false">Interests</a>
+
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-money" role="tabpanel">
+                            <form asp-area="Setting" asp-controller="Setting" asp-action="TypeMoney" method="post">
+                                <div class="form-check ">
+                                    <input type="radio" class="form-check-input" id="inlineRadio1" asp-for="RadioOptions" value="1">
+                                    <label class="form-check-label" for="inlineRadio1">L lempira</label>
+                                </div>
+                                <div class="form-check ">
+                                    <input type="radio" class="form-check-input" id="inlineRadio2" asp-for="RadioOptions" value="2">
+                                    <label class="form-check-label" for="inlineRadio2">$ dolar</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-outline-info btn-sm">
+                                    &nbsp;
+                                    <label class="text-success">Money @Html.DisplayFor(m => m.Type_Money)  </label>
+                                </div>
+                                <label class="text-danger">@Html.DisplayFor(m => m.ErrorMessage)  </label>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-interests" role="tabpanel">
+                            <form asp-area="Setting" asp-controller="Setting" asp-action="SetInterests" method="post">
+                                <div class="row">
+                                    <input asp-for="Interests" placeholder="Interests" class="form-control" autofocus style="width: 9rem;" />
+                                    &nbsp;
+                                    <input type="submit" value="Save" class="btn btn-outline-info btn-sm">
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <span asp-validation-for="Interests" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-success">Interests @Html.DisplayFor(m => m.FormatInterests)  </label>
+                                </div>
+                                <label class="text-danger">@Html.DisplayFor(m => m.ErrorMessage)  </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

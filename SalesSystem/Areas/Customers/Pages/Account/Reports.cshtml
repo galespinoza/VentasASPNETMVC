@@ -1,0 +1,314 @@
+﻿@page "/Customers/Reports"
+@model ReportsModel
+@{
+    var name = $"{Model.Input.DataClient.Name} {Model.Input.DataClient.LastName}";
+    var currentDebt = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.CurrentDebt)}";
+    var lastPayment = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.LastPayment)}";
+    var monthly = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.Monthly)}";
+    var id = Model.Input.DataClient.IdClient;
+}
+<div class="container">
+    <h1>@name</h1>
+    <div class="row">
+        <div class="col-sm ">
+            <form asp-area="Customers" asp-page="Reports" method="post">
+                <div class="card text-center" style="width: 21rem;">
+                    <div class="card-header ">
+                        <h5>Reportes de pagos</h5>
+                    </div>
+                    <div class="card-body">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" data-toggle="tab" href="#nav-fee" role="tab" aria-selected="true" onclick="new Customers().SetSection(1)">Cuotas</a>
+
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-interests" role="tab" aria-selected="false" onclick="new Customers().SetSection(2)">Intereses</a>
+
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-fee" role="tabpanel">
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <p>Deuda: </p>
+                                        &nbsp;
+                                        <p> @currentDebt </p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Pago: </p>
+                                        &nbsp;
+                                        <p>@lastPayment</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Cuotas por mes: </p>
+                                        &nbsp;
+                                        <p>@monthly</p>
+                                        <input type="hidden" value="@Model.Input.DataClient.Monthly" id="monthly" />
+                                    </div>
+                                    <div class="row">
+                                        <p>Fecha del pago: </p>
+                                        &nbsp;
+                                        <p>@Model.Input.DataClient.DatePayment.ToString("dd/MMM/yyy")</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Ticket: </p>
+                                        &nbsp;
+                                        <p>@Model.Input.DataClient.Ticket</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-interests" role="tabpanel">
+                                @{
+                                    var interests = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataInterests.Interests)}";
+                                    var payment = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataInterests.Payment)}";
+                                    var change = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataInterests.Change)}";
+                                }
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p>Intereses</p>
+                                            </th>
+                                            <th>
+                                                <p>Pago</p>
+                                            </th>
+                                            <th>
+                                                <p>Fecha pago</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p> @interests </p>
+                                            </td>
+                                            <td>
+                                                <p> @payment </p>
+                                            </td>
+                                            <td>
+                                                <p>@Model.Input.DataInterests.InterestDate.ToString("dd/MMM/yyy")</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p>Cambio</p>
+                                            </th>
+                                            <th>
+                                                <p>Cuotas</p>
+                                            </th>
+                                            <th>
+                                                <p>Total intreses </p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>@change</p>
+                                            </td>
+                                            <td>
+                                                <p>@Model.Input.DataInterests.Fee</p>
+                                            </td>
+                                            <td>
+                                                <input asp-for="Input.AmountFees" onkeypress="return customers.GetInterests(event,this,@id)" min="0" class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <p>Total a pagar @Model.Input.Money </p>
+                                        &nbsp;
+                                        <p class="text-danger" id="amountFees"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio1" asp-for="Input.RadioOptions" value="1">
+                                    <label class="form-check-label" for="inlineRadio1">Cuotas</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="inlineRadio2" asp-for="Input.RadioOptions" value="2">
+                                    <label class="form-check-label" for="inlineRadio2">Intereses</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <span asp-validation-for="Input.RadioOptions" class="text-danger"></span>
+                                </div>
+                                <br />
+                                <br />
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input asp-for="Input.Payment" placeholder="Pagos" class="form-control" autofocus onkeypress="return customers.Payments(event,this)" />
+                                            <span asp-validation-for="Input.Payment" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <p class="text-danger" id="paymentMessage"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input type="submit" id="payment" value="Efectuar pago" class="btn btn-success btn-block">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <form asp-area="Customers" asp-page="Reports" method="get">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label class="form-check-label">Inicio</label>
+                            <input style="width: 10.5rem;" class="form-control" asp-for="Input.Time1">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-check-label">Final</label>
+                            <input style="width: 10.5rem;" class="form-control" asp-for="Input.Time2">
+                        </div>
+                        <div class="col-sm">
+                            <label class="form-check-label"></label>
+                            <input type="submit" value="Filtrar" class="btn btn-success btn-block">
+                        </div>
+                    </div>
+                    <input type="hidden" value="@id" name="id">
+                </form>
+                <div class="card-body">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-fee2" role="tab" aria-selected="true">Cuotas</a>
+
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-interests2" role="tab" aria-selected="false">Intereses</a>
+
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-fee2" role="tabpanel">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TPayments.Input.Debt)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TPayments.Input.CurrentDebt)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TPayments.Input.Payment)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TPayments.Input.Date)
+                                        </th>
+                                        <th>
+                                            Opciones
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Input.TPayments.List)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Debt)
+                                            </td>
+                                            <td>
+                                                @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.CurrentDebt)
+                                            </td>
+                                            <td>
+                                                @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Payment)
+                                            </td>
+                                            <td>
+                                                @{
+                                                    var nowDate = $"{ item.Date.Day}/{ item.Date.Month}/{ item.Date.Year}";
+                                                }
+                                                @Html.Raw(nowDate)
+                                            </td>
+                                            <td>
+                                                <a href="/Customers/DetailsDebt?idDebt=@item.IdPayments&idClient=@id" class="btn btn-outline-info btn-sm">
+                                                    Reportes
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-interests2" role="tabpanel">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TInterest.Input.Interests)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TPayments.Input.Payment)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TInterest.Input.Change)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TInterest.Input.Fee)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Input.TInterest.Input.Date)
+                                        </th>
+                                        <th>
+                                            Opciones
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Input.TInterest.List)
+                                    {
+                                    <tr>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Interests)
+                                        </td>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Payment)
+                                        </td>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Change)
+                                        </td>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Fee)
+                                        </td>
+                                        <td>
+                                            @{
+                                                var nowDate = $"{ item.Date.Day}/{ item.Date.Month}/{ item.Date.Year}";
+                                            }
+                                            @Html.Raw(nowDate)
+                                        </td>
+                                        <td>
+                                            <a href="/Customers/InterestDetails?idDebt=@item.IdPaymentsInterest&idClient=@id" class="btn btn-outline-info btn-sm">
+                                                Reportes
+                                            </a>
+                                        </td>
+                                    </tr>
+                                            }
+                                    </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

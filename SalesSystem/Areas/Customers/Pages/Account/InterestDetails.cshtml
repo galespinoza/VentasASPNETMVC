@@ -1,0 +1,65 @@
+﻿@page "/Customers/InterestDetails"
+@model InterestDetailsModel
+@{
+    var name = $"{Model.Input.DataClient.Name} {Model.Input.DataClient.LastName}";
+    var interests = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.Interests)}";
+    var payment = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.Payment)}";
+    var change = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataClient.Change)}";
+    var id = Model.Input.DataClient.IdClient;
+}
+    <div class="container">
+        <h1>@name</h1>
+        <div class="row">
+            <div class="col-sm ">
+                <div class="card text-center" style="width: 21rem;">
+                    <div class="card-header ">
+                        <h5>Reporte de pago</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <p>Interes: </p>
+                                &nbsp;
+                                <p> @interests </p>
+                            </div>
+                            <div class="row">
+                                <p>Cuotas: </p>
+                                &nbsp;
+                                <p>@Model.Input.DataClient.Fee</p>
+                            </div>
+                            <div class="row">
+                                <p>Pago: </p>
+                                &nbsp;
+                                <p>@payment</p>
+                            </div>
+                            <div class="row">
+                                <p>Cambio: </p>
+                                &nbsp;
+                                <p>@change</p>
+                            </div>
+                            <div class="row">
+                                <p>Fecha del pago: </p>
+                                &nbsp;
+                                <p>@Model.Input.DataClient.Date.ToString("dd/MMM/yyy")</p>
+                            </div>
+                            <div class="row">
+                                <p>Ticket: </p>
+                                &nbsp;
+                                <p>@Model.Input.DataClient.Ticket</p>
+                            </div>
+                            <div class="row">
+                                <p>Usuario: </p>
+                                &nbsp;
+                                <p>@Model.Input.DataClient.User</p>
+                            </div>
+                            <div class="row">
+                                <form asp-area="Customers" asp-page="InterestDetails" method="post">
+                                    <input type="submit" value="Ticket" class="btn btn-outline-info btn-sm">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

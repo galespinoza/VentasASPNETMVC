@@ -1,0 +1,92 @@
+﻿@page "/Product/UpdateProduct"
+@model UpdateProductModel
+@{
+    var image = "";
+    if (Model.Input.Image != null)
+    {
+        image = "data:image/jpg;base64," + Convert.ToBase64String(Model.Input.Image,
+       0, Model.Input.Image.Length);
+    }
+    else
+    {
+        image = "/images/images/add_shopping.png";
+    }
+}
+<div class="container p-4">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="card text-center">
+                    <div class="card-header ">
+                        <output id="updateProduct">
+                            <img src=@image class="imageUser" />
+                        </output>
+                    </div>
+                    <div class="card-body">
+                        <div class="caption text-center">
+                            <label class="btn btn-primary" for="files">Cargar foto</label>
+                            <input asp-for="Input.AvatarImage" accept="image/*" type="file" id="files">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-5">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Update product</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="accordionExample">
+                            <div id="header" class="bg-info">
+                                <h2 class="mb-0 t">
+                                    <button class="btn btn-link text-light " type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Ingresar informacion
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                 data-parent="#accordionExample">
+                                <div class="form-group">
+                                    <input asp-for="Input.Barcode" placeholder="Barcode" class="form-control" autofocus />
+                                    <span asp-validation-for="Input.Barcode" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Input.Description" placeholder="Description" class="form-control" />
+                                    <span asp-validation-for="Input.Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Input.Price" placeholder="Price" class="form-control" />
+                                    <span asp-validation-for="Input.Price" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Input.Department" placeholder="Department" class="form-control" />
+                                    <span asp-validation-for="Input.Department" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Input.Categories" placeholder="Categories" class="form-control" />
+                                    <span asp-validation-for="Input.Categories" class="text-danger"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <a class="btn btn-success " asp-route-id="@Model.Input.IdProduct" asp-area="Product" asp-page="/Account/DetailsProduct">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

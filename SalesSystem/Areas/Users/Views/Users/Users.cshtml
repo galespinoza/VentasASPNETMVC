@@ -1,0 +1,97 @@
+﻿@model DataPaginador<InputModelRegister>
+@{
+    ViewData["Title"] = "Users";
+}
+<div class="container p-4">
+    <div class="row">
+        <div class="form-group">
+            <form asp-area="Users" asp-controller="Users" asp-action="Users" method="get">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" id="filtrar" name="filtrar" placeholder="Buscar" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <input type="submit" value="Buscar" class="btn btn-success">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-1">
+
+                    </div>
+                </div>
+                <form asp-area="Users" asp-controller="Users" asp-action="Users" method="get">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="number" name="registros" class="form-control" value="5" min="1" max="50" step="1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <input type="submit" class="btn btn-success" value="N Registros">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.List)
+        {
+            var image = "data:image/jpg;base64," + Convert.ToBase64String(item.Image, 0, item.Image.Length);
+            <div class="col-xs-6 col-md-2">
+                <div class="card text-center">
+                    <div class="card-header ">
+                        <a asp-route-id="@item.Id" asp-area="Users" asp-page="/Account/Details">
+                            <img class='imageUsers' src="@image" />
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <p> @Html.DisplayFor(modelItem => item.Name)</p>
+                            </div>
+                            <div class="row">
+                                <p>Role: </p>
+                                &nbsp;
+                                <p>@Html.DisplayFor(modelItem => item.Role)</p>
+                            </div>
+                            <div class="row">
+                                @if (item.IdentityUser.LockoutEnabled)
+                                {
+                                    <p class="text-success">Disponible.</p>
+                                }
+                                else
+                                {
+                                    <p class="text-danger">No disponible.</p>
+                                }
+                            </div>
+                            <div class="row">
+                                <a class="btn btn-success " asp-route-id="@item.Id" asp-area="Users" asp-page="/Account/Details">
+                                    Details
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="text-center">
+    Resultados @Html.Raw(Model.Pagi_info);
+    <br />
+    @Html.Raw(Model.Pagi_navegacion)
+</div>

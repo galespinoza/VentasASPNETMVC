@@ -1,0 +1,115 @@
+﻿@page
+@model DetailsModel
+@{
+    var image = "data:image/jpg;base64," + Convert.ToBase64String(Model.Input.DataUser.Image,
+        0, Model.Input.DataUser.Image.Length);
+    var name = Model.Input.DataUser.Name + " " + Model.Input.DataUser.LastName;
+}
+    <div class="container">
+        <h1>@name</h1>
+        <div class="row">
+            <div class="col-sm ">
+                <div class="card text-center" style="width: 21rem;">
+                    <div class="card-header ">
+                        <img class='imageUserDetails' src="@image" />
+                    </div>
+                    <div class="card-body">
+                        <table class="tableCursos">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p> @Model.Input.DataUser.Name</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>@Model.Input.DataUser.Role </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @if (Model.Input.DataUser.IdentityUser.LockoutEnabled)
+                                        {
+                                            <p class="text-success">Disponible.</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-danger">No disponible.</p>
+                                        }
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="tableCursos">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Informacion
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        NID
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>@Model.Input.DataUser.NID</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Nombre
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>@name</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Telefono
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>@Model.Input.DataUser.IdentityUser.PhoneNumber</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Correo electronico
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>@Model.Input.DataUser.Email</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form asp-area="Users" asp-page="Register" method="post">
+                                            @{
+                                                var dataUser = JsonConvert.SerializeObject(Model.Input.DataUser);
+                                            }
+
+                                            <input type="hidden" name="DataUser" value="@dataUser" />
+                                            <input type="submit" value="Editar" class="btn btn-success ">
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

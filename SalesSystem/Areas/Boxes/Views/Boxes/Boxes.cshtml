@@ -1,0 +1,161 @@
+﻿@model DataPaginador<InputModelRegister>
+@{
+    ViewData["Title"] = "Boxes";
+    var money = LSetting.Mony;
+}
+<div class="container">
+    <h5>Register of boxes</h5>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <div class="col-xl-7 col-md-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <form asp-area="Boxes" asp-controller="Boxes" asp-action="AddBox" method="post">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <input asp-for="Input.Box" name="Box" class="form-control" value="@Model.Input.Box" min="1" max="50" step="1">
+                                    </div>
+                                    &nbsp;&nbsp;
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-success" value="Register" id="BoxeRegister">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" asp-for="Input.State" name="State" onclick="" id="State">
+                                        <label class="form-check-label" for="State">Estado</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <form asp-area="Boxes" asp-controller="Boxes" asp-action="SetIncome" method="post">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-check form-check-inline">
+                                                <input type="checkbox" class="form-check-input" id="check" onclick="boxes.Check()">
+                                                <label class="form-check-label" for="check">Asignar ingresos</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <span class="text-success labelCompra_Importe">
+                                                N#
+                                                @Html.Raw(Model.Input.Box)
+                                            </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.Ticket" placeholder="Ticket" class="form-control" autocomplete="off" />
+                                            <span asp-validation-for="Input.Ticket" class="text-danger" id="dangerTicket"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input asp-for="Input.Money" placeholder="Money" class="form-control" autocomplete="off" />
+                                            <span asp-validation-for="Input.Money" class="text-danger" id="dangerMoney"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <button type="submit" class="btn btn-primary btn-block" id="buttonBox">Ingreso</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <a asp-area="Boxes" asp-controller="Boxes" asp-action="Boxes" class="btn btn-warning text-white">Cancel</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-body">
+                    <form method="get">
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="text" name="search" placeholder="Busacar" class="form-control" autofocus autocomplete="off" />
+                            </div>
+                            &nbsp;&nbsp;
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-info btn-sm">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Input.Box)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Input.Ticket)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Input.Money)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Input.Entry)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Input.State)
+                                </th>
+                                <th>
+                                    Select
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.List)
+                            {
+                            <tr>
+                                <td>
+                                    @Html.Raw(item.Box)
+                                </td>
+                                <td>
+                                    @string.Format(money + "{0:#,###,###,##0.00####}", item.Ticket)
+                                </td>
+                                <td>
+                                    @string.Format(money + "{0:#,###,###,##0.00####}", item.Money)
+                                </td>
+                                <td>
+                                    @string.Format(money + "{0:#,###,###,##0.00####}", item.Entry)
+                                </td>
+                                <td>
+                                    @if (item.State)
+                                    {
+                                        <p class="text-success">Disponible.</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="text-danger">No disponible.</p>
+                                    }
+                                </td>
+                                <td>
+                                    <a href="/Boxes/GetBoxe?id=@item.IdBox" class="btn btn-outline-info btn-sm">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+						Resultados @Html.Raw(Model.Pagi_info)
+						<br />
+						@Html.Raw(Model.Pagi_navegacion)
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

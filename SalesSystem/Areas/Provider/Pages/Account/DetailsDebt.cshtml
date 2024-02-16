@@ -1,0 +1,116 @@
+﻿@page "/Provider/DetailsDebt"
+@model DetailsDebtModel
+@{
+    var name = $"{Model.Input.DataProvider.Provider}";
+    var debt = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.Debt)}";
+    var payment = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.Payment)}";
+    var change = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.Change)}";
+    var currentDebt = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.CurrentDebt)}";
+    var id = Model.Input.DataProvider.IdProvider;
+    var monthly = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.Monthly)}";
+
+    var importe = $"{Model.Input.Money}{DetailsDebtModel.importe}";
+    var previousDebt = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.PreviousDebt)}";
+    var cuotas = DetailsDebtModel.cuotas1 - DetailsDebtModel.value;
+}
+<div class="container">
+    <h1>@name</h1>
+    <div class="row">
+        <div class="col-sm ">
+            <div class="card text-center" style="width: 21rem;">
+                <div class="card-header ">
+                    <h5>Reporte de pago</h5>
+                </div>
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <h5>Factura</h5>
+                        </div>
+                        <div class="row">
+                            <p>Ticket: </p>
+                            &nbsp;
+                            <p>@Model.Input.DataProvider.Ticket</p>
+                        </div>
+                        <div class="row">
+                            <p>Proveedor: </p>
+                            &nbsp;
+                            <p>@Model.Input.DataProvider.Provider</p>
+                        </div>
+                        <div class="row">
+                            <p>Usuario: </p>
+                            &nbsp;
+                            <p>@Model.Input.DataProvider.User</p>
+                        </div>
+                        <div class="row">
+                            <p>Fecha deuda: </p>
+                            &nbsp;
+                            <p>@Model.Input.DataProvider.DateDebt.ToString("dd/MMM/yyy")</p>
+                        </div>
+                        <div class="row">
+                            @{
+                                var qm = Model.Input.DataProvider.Agreement;
+                                if (qm.Equals('\0') || Model.Input.DataProvider.Monthly.Equals(0.0))
+                                {
+                                    <p class="text-danger">Establezca una forma de pago</p>
+                                }
+                                else
+                                {
+                                    var value = qm.Equals('Q') ? "Cuotas quincenales " : "Cuotas por mes ";
+                                    <p>@value</p>
+                                    <p>@monthly</p>
+
+                                }
+                            }
+                        </div>
+                        <div class="row">
+                            <p>Cuotas pagadas</p>
+                            &nbsp;
+                            <p>@DetailsDebtModel.cuotas2</p>
+                        </div>
+                        <div class="row">
+                            <p>Importe pagado : </p>
+                            &nbsp;
+                            <p> @importe</p>
+                        </div>
+                        <div class="row">
+                            <p>Deuda anterior: </p>
+                            &nbsp;
+                            <p> @previousDebt </p>
+                        </div>
+                        <div class="row">
+                            <p>Pago: </p>
+                            &nbsp;
+                            <p>@payment</p>
+                        </div>
+                        <div class="row">
+                            <p>Cambio: </p>
+                            &nbsp;
+                            <p>@change</p>
+                        </div>
+                        <div class="row">
+                            <p>Fecha del pago: </p>
+                            &nbsp;
+                            <p>@Model.Input.DataProvider.Date.ToString("dd/MMM/yyy")</p>
+                        </div>
+                        <div class="row">
+                            <p>Cuotas por pagar: </p>
+                            &nbsp;
+                            <p> @cuotas </p>
+                        </div>
+                        <div class="row">
+                            <p>Deuda actual: </p>
+                            &nbsp;
+                            <p> @currentDebt </p>
+                        </div>
+
+                        <div class="row">
+                            <form asp-area="Provider" asp-page="DetailsDebt" method="post">
+                                <input type="submit" value="Ticket" class="btn btn-outline-info btn-sm">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

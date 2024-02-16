@@ -1,0 +1,235 @@
+﻿@page "/Provider/Reports"
+@model ReportsModel
+@{
+
+    var name = $"{Model.Input.DataProvider.Provider}";
+    var currentDebt = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.CurrentDebt)}";
+    var lastPayment = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.LastPayment)}";
+    var monthly = $"{Model.Input.Money}{String.Format("{0:#,###,###,##0.00####}", Model.Input.DataProvider.Monthly)}";
+    var id = Model.Input.DataProvider.IdProvider;
+}
+
+<div class="container">
+    <h1>@name</h1>
+    <div class="row">
+        <div class="col-sm ">
+            <form asp-area="Provider" asp-page="Reports" method="post">
+                <div class="card text-center" style="width: 21rem;">
+                    <div class="card-header ">
+                        <h5>Reportes de pagos</h5>
+                    </div>
+                    <div class="card-body">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" data-toggle="tab" href="#nav-fee" role="tab" aria-selected="true" onclick="new Provider().SetSection(1)">Cuotas</a>
+
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-waytopay" role="tab" aria-selected="true" onclick="new Provider().SetSection(2)">Forma de pago</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-fee" role="tabpanel">
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <p>Deuda: </p>
+                                        &nbsp;
+                                        <p> @currentDebt </p>
+                                        <input type="hidden" value="@Model.Input.DataProvider.CurrentDebt" id="currentDebt" />
+                                    </div>
+                                    <div class="row">
+                                        <p>Pago: </p>
+                                        &nbsp;
+                                        <p>@lastPayment</p>
+                                    </div>
+                                    <div class="row">
+                                        @{
+                                            var qm = Model.Input.DataProvider.Agreement;
+                                            if (qm.Equals('\0') || Model.Input.DataProvider.Monthly.Equals(0.0))
+                                            {
+                                                <p class="text-danger">Establezca una forma de pago</p>
+                                                <input type="hidden" value="0" id="monthly" />
+                                            }
+                                            else
+                                            {
+                                                var value = qm.Equals('Q') ? "Cuotas quincenales " : "Cuotas por mes ";
+                                                <p>@value</p>
+                                                <p> &nbsp;</p>
+                                                <p>@monthly</p>
+                                                <input type="hidden" value="@Model.Input.DataProvider.Monthly" id="monthly" />
+                                            }
+                                        }
+                                    </div>
+                                    <div class="row">
+                                        <p>Fecha del pago: </p>
+                                        &nbsp;
+                                        <p>@Model.Input.DataProvider.DatePayment.ToString("dd/MMM/yyy")</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Ticket: </p>
+                                        &nbsp;
+                                        <p>@Model.Input.DataProvider.Ticket</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" class="form-check-input" id="inlineRadio1" asp-for="Input.RadioOptions" value="1">
+                                            <label class="form-check-label" for="inlineRadio1">Cuotas</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <span asp-validation-for="Input.RadioOptions" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <input type="number" asp-for="Input.AmountFees"
+                                                   onkeyup="return provider.Payments(event,this)"
+                                                   min="0" class="form-control" style="width: 8rem;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-waytopay" role="tabpanel">
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <p>Deuda total: </p>
+                                        &nbsp;
+                                        <p> @currentDebt </p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Forma de pago </p>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="inlineRadio2" asp-for="Input.RadioOptions1" value="1" onclick="provider.Check()">
+                                                    <label class="form-check-label" for="inlineRadio2">Quincenal</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input type="radio" class="form-check-input" id="inlineRadio3" asp-for="Input.RadioOptions1" value="2" onclick="provider.Check()">
+                                                    <label class="form-check-label" for="inlineRadio3">Mensual</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p id="fees">Cuotas por mes</p>
+                                    </div>
+                                    <div class="row">
+                                        <p id="fee">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input asp-for="Input.Payment" placeholder="Pagos" class="form-control" autofocus onkeypress="return provider.Payments(event,this)" id="PaymentProvider" autocomplete="off"/>
+                                        <span asp-validation-for="Input.Payment" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <p class="text-danger" id="paymentMessage"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" id="payment" value="Efectuar pago" class="btn btn-success btn-block">
+                                        <input type="hidden" name="section" id="section" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-danger">@Html.DisplayFor(m => m.Input.ErrorMessage)  </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <div class="col-sm">
+        <div class="card">
+            <form asp-area="Provider" asp-page="Reports" method="get">
+                <div class="row">
+                    <div class="col-sm">
+                        <label class="form-check-label">Inicio</label>
+                        <input style="width: 10.5rem;" class="form-control" asp-for="Input.Time1">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-check-label">Final</label>
+                        <input style="width: 10.5rem;" class="form-control" asp-for="Input.Time2">
+                    </div>
+                    <div class="col-sm">
+                        <label class="form-check-label"></label>
+                        <input type="submit" value="Filtrar" class="btn btn-success btn-block">
+                    </div>
+                </div>
+                <input type="hidden" value="@id" name="id">
+            </form>
+            <div class="card-body">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" data-toggle="tab" href="#nav-fee2" role="tab" aria-selected="true">Cuotas</a>
+
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-fee2" role="tabpanel">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Input.TPayments.Input.Debt)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Input.TPayments.Input.CurrentDebt)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Input.TPayments.Input.Payment)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Input.TPayments.Input.Date)
+                                    </th>
+                                    <th>
+                                        Opciones
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Input.TPayments.List)
+                                {
+                                    <tr>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Debt)
+                                        </td>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.CurrentDebt)
+                                        </td>
+                                        <td>
+                                            @string.Format(Model.Money + "{0:#,###,###,##0.00####}", item.Payment)
+                                        </td>
+                                        <td>
+                                            @{
+                                                var nowDate = $"{ item.Date.Day}/{ item.Date.Month}/{ item.Date.Year}";
+                                            }
+                                            @Html.Raw(nowDate)
+                                        </td>
+                                        <td>
+                                            <a href="/Provider/DetailsDebt?idDebt=@item.IdPayments&idProvider=@id" class="btn btn-outline-info btn-sm">
+                                                Reportes
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
